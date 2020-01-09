@@ -19,7 +19,7 @@ import com.rija.foodmandu.ui.send.SendFragment;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText etEmail, etPassword;
-    private TextView tvCreate, tvPassword;
+    private TextView tvCreate, tvForgetPassword;
     private Button btnLogin, btnFacebook, btnGoogle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         tvCreate = findViewById(R.id.tvCreate);
-        tvPassword = findViewById(R.id.tvPassword);
+        tvForgetPassword = findViewById(R.id.tvForgetPassword);
         btnFacebook = findViewById(R.id.btnFacebook);
         btnGoogle = findViewById(R.id.btnGoogle);
         btnLogin.setOnClickListener(new View.OnClickListener() {

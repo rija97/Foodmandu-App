@@ -33,7 +33,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#B22222"
+        android:background="@drawable/buttondesign1"
         android:text="LOGIN"/>
 
 
