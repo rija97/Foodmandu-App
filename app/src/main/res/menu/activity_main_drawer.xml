@@ -35,15 +35,15 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/favourites"
-            android:title="@string/menu_gallery" />
+            android:title="My Favourites" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/basket"
-            android:title="@string/menu_slideshow" />
+            android:title="My basket" />
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/history"
-            android:title="@string/menu_tools" />
+            android:title="Order history" />
         <item
             android:id="@+id/nav_notification"
             android:icon="@drawable/notification"

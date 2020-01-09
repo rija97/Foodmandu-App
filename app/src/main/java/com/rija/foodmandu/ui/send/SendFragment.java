@@ -18,7 +18,7 @@ import com.rija.foodmandu.R;
 import com.rija.foodmandu.ui.LoginActivity;
 
 public class SendFragment extends Fragment {
-
+TextView txtAbout, txtFeedback, txtTerms,txtFaqs;
     Button btnLogin;
 
     private SendViewModel sendViewModel;
@@ -27,7 +27,7 @@ public class SendFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         sendViewModel =
                 ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        View view = inflater.inflate(R.layout.fragment_send, container, false);
 //        final TextView textView = root.findViewById(R.id.text_send);
 //        sendViewModel.getText().observe(this, new Observer<String>() {
 //            @Override
@@ -35,8 +35,13 @@ public class SendFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
+        txtAbout= view.findViewById(R.id.txtAbout);
+        txtFeedback = view.findViewById(R.id.txtFeedback);
+        txtFaqs = view.findViewById(R.id.txtFaqs);
+        txtTerms = view.findViewById(R.id.txtTerms);
+        btnLogin = view.findViewById(R.id.btnLogin);
 
-        btnLogin=root.findViewById(R.id.btnLogin);
+        btnLogin= view.findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +50,6 @@ public class SendFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        return root;
+        return view;
     }
 }
