@@ -1,9 +1,11 @@
 package com.rija.foodmandu.ui.send;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -13,8 +15,11 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.rija.foodmandu.R;
+import com.rija.foodmandu.ui.LoginActivity;
 
 public class SendFragment extends Fragment {
+
+    Button btnLogin;
 
     private SendViewModel sendViewModel;
 
@@ -23,11 +28,21 @@ public class SendFragment extends Fragment {
         sendViewModel =
                 ViewModelProviders.of(this).get(SendViewModel.class);
         View root = inflater.inflate(R.layout.fragment_send, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
+//        final TextView textView = root.findViewById(R.id.text_send);
+//        sendViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
+
+        btnLogin=root.findViewById(R.id.btnLogin);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
         return root;

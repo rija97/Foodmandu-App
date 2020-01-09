@@ -5,34 +5,54 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_food"
+            android:title="">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/home"
+                    android:title="Home"/>
+            <item
+                android:id="@+id/nav_subcategory_restaurants"
+                android:icon="@drawable/restaurant"
+                android:title="Restaurants"/>
+        <item
+            android:id="@+id/nav_subcategory_liquors"
+            android:icon="@drawable/liquors"
+            android:title="Liquors"/>
+        <item
+            android:id="@+id/nav_subcategory_bakeries"
+            android:icon="@drawable/bakeries"
+            android:title="Bakeries"/>
+        <item
+            android:id="@+id/nav_subcategory_organic"
+            android:icon="@drawable/organic"
+            android:title="Organic"/>
+        </menu>
+
+            </item>
+
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/favourites"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/basket"
             android:title="@string/menu_slideshow" />
         <item
             android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/history"
             android:title="@string/menu_tools" />
-    </group>
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/notification"
+            android:title="Notification" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/more"
+            android:title="More" />
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
-        </menu>
-    </item>
+    </group>
 
 </menu>
