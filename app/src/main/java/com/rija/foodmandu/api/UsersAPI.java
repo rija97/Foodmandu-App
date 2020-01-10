@@ -17,18 +17,18 @@ import retrofit2.http.Part;
 
 public interface UsersAPI {
 
-    @POST("users/signup")
+    @POST("user/signup")
     Call<SignUpResponse> registerUser(@Body User users);
 
     @FormUrlEncoded
-    @POST("users/login")
+    @POST("user/login")
     Call<SignUpResponse> checkUser(@Field("username") String username, @Field("password") String password);
 
     @Multipart
     @POST("upload")
     Call<ImageResponse> uploadImage(@Part MultipartBody.Part img);
 
-    @GET("users/me")
+    @GET("user/me")
     Call<User> getUserDetails(@Header("Authorization") String token);
 
 }

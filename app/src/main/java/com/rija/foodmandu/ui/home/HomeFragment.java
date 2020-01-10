@@ -27,8 +27,12 @@ import com.synnapps.carouselview.ImageListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class HomeFragment extends Fragment {
     RecyclerView recyclerView, recyclerView1;
+   // TextView tvsuper7;
     private int[] mImages = new int[]{
             R.drawable.coke, R.drawable.byanjan, R.drawable.real, R.drawable.signature
     };
@@ -58,6 +62,59 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getContext(), mImageTitlte[position], Toast.LENGTH_SHORT).show();
             }
         });
+
+//        //super7
+//        tvsuper7 = view.findViewById(R.id.tvsuper7);
+//        super7();
+//
+//        return view;
+//    }
+//
+//    private void super7() {
+//
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl("http://10.0.2.2:3000/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//
+//        super7API super7API = retrofit.create(super7API.class);
+//
+//        Call<List<super7>> ListCall = super7API.getSuper7();
+//        super7API super7API1 = url.getInstance().create(super7API.class);
+//
+//        ListCall.enqueue(new Callback<List<super7>>() {
+//
+//            @Override
+//            public void onResponse(Call<List<super7>> call, Response<List<super7>> response) {
+//                if(!response.isSuccessful()){
+//                    tvsuper7.setText(" Code : " + response.code());
+//                    return;
+//                }
+//                List<super7> super7List = response.body();
+//
+//                for (super7 super7 : super7List ){
+//                    String content = " ";
+//                    content +=  super7.getImage() + "\n";
+//                    content +=  (super7.getName()+ "\n") ;
+//                    content +=  super7.getLocation()+ "\n";
+//
+//                    tvsuper7.append(content);
+//
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<super7>> call, Throwable t) {
+//                tvsuper7.setText("Error" + t.getMessage());
+//            }
+//        });
+//
+//
+//
+//
+//    }
+
         List<Contacts> contactsList = new ArrayList<>();
         contactsList.add(new Contacts("restaurant", R.drawable.restaurant));
         contactsList.add(new Contacts("liquors", R.drawable.liquors));

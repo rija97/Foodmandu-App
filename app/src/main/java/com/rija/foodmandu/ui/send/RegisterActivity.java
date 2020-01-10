@@ -139,7 +139,7 @@ public class RegisterActivity extends AppCompatActivity {
         String password = etPassword.getText().toString();
 
 
-        User user = new User(firstname, lastname, username, phoneno, password);
+        User user = new User(firstname, lastname, username, phoneno, password,imageName);
         UsersAPI userapi = Url.getInstance().create(UsersAPI.class);
         Call<SignUpResponse> signupResponseCall = userapi.registerUser(user);
         signupResponseCall.enqueue(new Callback<SignUpResponse>() {
