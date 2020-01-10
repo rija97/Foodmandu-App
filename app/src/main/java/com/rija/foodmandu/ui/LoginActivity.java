@@ -61,9 +61,10 @@ public class LoginActivity extends AppCompatActivity {
         String password = etPassword.getText().toString();
 
         LoginBLL loginBLL = new LoginBLL();
+
 com.rija.foodmandu.ui.username Username= new username(email,password);
         StrictModeClass.StrictMode();
-        UsersAPI usersAPI = com.rija.foodmandu.url.Url.getInstance().create(UsersAPI.class);
+        UsersAPI usersAPI = Url.getInstance().create(UsersAPI.class);
         Call<SignUpResponse> userCall = usersAPI.checkLogin(Username);
         userCall.enqueue(new Callback<SignUpResponse>() {
             @Override

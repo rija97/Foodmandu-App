@@ -29,6 +29,8 @@ import com.rija.foodmandu.ui.Contacts;
 import com.rija.foodmandu.ui.ContactsAdapter;
 import com.rija.foodmandu.ui.Details;
 import com.rija.foodmandu.ui.DetailsAdapter;
+import com.rija.foodmandu.ui.member;
+import com.rija.foodmandu.ui.memberAdaptar;
 import com.rija.foodmandu.url.Url;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageClickListener;
@@ -49,12 +51,15 @@ import static com.rija.foodmandu.url.Url.imagePath;
 
 public class HomeFragment extends Fragment {
     List<Details> detailsList;
+    List<member> memberList;
+    memberAdaptar memberAdaptar;
     DetailsAdapter detailsAdapter;
     BakeriesAdapter bakeriesAdapter;
     List<Bakeries> bakeriesList;
-    RecyclerView recyclerView, recyclerView1,recyclerView2;
+    RecyclerView recyclerView, recyclerView1,recyclerView2, memberrecycleview;
    // TextView tvsuper7;
     ImageView card1;
+
     private int[] mImages = new int[]{
             R.drawable.coke, R.drawable.byanjan, R.drawable.real, R.drawable.signature
     };
@@ -71,6 +76,7 @@ public class HomeFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycleview);
         recyclerView1 = view.findViewById(R.id.recycleview1);
         recyclerView2 = view.findViewById(R.id.recycleview2);
+        memberrecycleview = view.findViewById(R.id.memberrecycleview);
         carouselView = view.findViewById(R.id.cara1);
         carouselView.setPageCount(mImages.length);
         carouselView.setImageListener(new ImageListener() {
