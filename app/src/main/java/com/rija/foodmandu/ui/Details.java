@@ -4,13 +4,13 @@ public class Details {
     public String name;
     public  String location;
     public String image;
-    public String item;
+    public String itemtype;
 
-    public Details(String name, String location, String image, String item) {
+    public Details(String name, String location, String image, String itemtype) {
         this.name = name;
         this.location = location;
         this.image = image;
-        this.item = item;
+        this.itemtype = itemtype;
     }
 
     public String getName() {
@@ -33,15 +33,16 @@ public class Details {
         return image;
     }
 
+
     public void setImage(String image) {
         this.image = image;
     }
 
-    public String getItem() {
-        return item;
+    public String getItemtype() {
+        return itemtype;
     }
 
-    public void setItem(String item) {
-        this.item = item;
+    public void setItemtype(String itemtype) {
+        this.itemtype = itemtype;
     }
 }

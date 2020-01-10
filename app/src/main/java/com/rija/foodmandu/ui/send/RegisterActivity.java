@@ -110,7 +110,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void saveImageOnly() {
         File file = new File(imagePath);
         RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
-        MultipartBody.Part body = MultipartBody.Part.createFormData("imageFile",
+        MultipartBody.Part body = MultipartBody.Part.createFormData("myFile",
                 file.getName(), requestBody);
 
         UsersAPI usersAPI = Url.getInstance().create(UsersAPI.class);

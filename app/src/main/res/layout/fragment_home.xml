@@ -44,13 +44,20 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:src="@drawable/visi"/>
+    <TextView
+        android:id="@+id/tvsuper7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="SUPER 7"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleview1"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
         android:orientation="horizontal"
         android:layout_marginTop="1dp"
         android:scrollbars="horizontal"
@@ -58,25 +65,58 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="209dp"
-        android:src="@drawable/bhaktapur" />
+        android:layout_height="200dp"
+        android:layout_margin= "10dp"
+        android:src="@drawable/happylunch" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1a0000">
 
-    <ImageView
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="In the Spotlight"
+    android:textColor="#FFFFFF"
+    android:textSize="15sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="chef's special mention"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/happylunch" />
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        android:scrollbars="horizontal"
+        app:fastScrollEnabled="false"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_height="209dp"
+
+        android:src="@drawable/bhaktapur" />
+
 
     <ImageView
         android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
         android:layout_height="100dp"
         android:src="@drawable/fonepay" />
 
-  <TextView
-      android:id="@+id/tvsuper7"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="10dp"
-      android:hint="Name"/>
+
 
     </LinearLayout>
 

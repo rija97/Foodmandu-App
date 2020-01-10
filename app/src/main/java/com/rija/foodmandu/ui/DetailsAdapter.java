@@ -1,6 +1,8 @@
 package com.rija.foodmandu.ui;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rija.foodmandu.R;
+import com.rija.foodmandu.strictmode.StrictModeClass;
+import com.rija.foodmandu.url.Url;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 
 public class DetailsAdapter  extends RecyclerView.Adapter<DetailsAdapter.ContactsViewHolder> {
@@ -41,9 +48,20 @@ public class DetailsAdapter  extends RecyclerView.Adapter<DetailsAdapter.Contact
 //        holder.tvPhoneNo.setText(contacts.getPhoneNo());
         final Details details = detailsList.get(i);
         //contactsViewHolder.monday.setImageResource(details.getImage());
+        String imgPath = Url.imagePath+details.getImage();
+
         contactsViewHolder.tvname.setText(details.getName());
-        contactsViewHolder.tvtitle.setText(details.getItem());
+        contactsViewHolder.tvtitle.setText(details.getItemtype());
         contactsViewHolder.tvaddress.setText(details.getLocation());
+        StrictModeClass.StrictMode();
+
+        try{
+            URL url = new URL(imgPath);
+            contactsViewHolder.card1.setImageBitmap(BitmapFactory.decodeStream((InputStream)
+            url.getContent()));
+        } catch(IOException e){
+            e.printStackTrace();
+        }
 
 
     }

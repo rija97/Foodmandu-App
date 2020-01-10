@@ -3,6 +3,7 @@ package com.rija.foodmandu.api;
 import com.rija.foodmandu.model.User;
 import com.rija.foodmandu.serverresponse.ImageResponse;
 import com.rija.foodmandu.serverresponse.SignUpResponse;
+import com.rija.foodmandu.ui.username;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -17,12 +18,15 @@ import retrofit2.http.Part;
 
 public interface UsersAPI {
 
-    @POST("user/signup")
+    @POST("user/register")
     Call<SignUpResponse> registerUser(@Body User users);
 
-    @FormUrlEncoded
     @POST("user/login")
-    Call<SignUpResponse> checkUser(@Field("username") String username, @Field("password") String password);
+    Call<SignUpResponse> checkLogin(@Body username Username);
+
+//    @FormUrlEncoded
+//    @POST("user/login")
+//    Call<SignUpResponse> checkUser(@Field("username") String username, @Field("password") String password);
 
     @Multipart
     @POST("upload")
